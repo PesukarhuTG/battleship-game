@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+/* FONTS */
+
+@font-face {
+	font-family: 'MTSsans', Arial, sans-serif;
+	src: url('fonts/MTSSans-Bold.otf') format('opentype');
+  }
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'MTSsans', Arial, sans-serif;
+  font-size: 22px;
+}
+
+
+body {
+   background: url("img/battleship.jpg") no-repeat center;
+}
+
+div#board {
+	width: 810px;
+	height: 850px;
+	position: relative;
+	margin: 0 auto;
+	display: flex;
+    justify-content: center;
+}
+
+div > table {
+	border-collapse: collapse;
+	position: absolute;
+	top: 50px;
+}
+
+td {
+	border: 1px solid #21e3ca;
+	width: 97px;
+	height: 97px;
+	background-color: #000000;
+	opacity: 0.8;
+}
+
+.cell-name {
+	color:#ffffff;
+	font-size: 30px;
+	text-align: center;
+	border-left: none;
+    border-bottom: none;
+    border-top: none;
+	background-color: transparent;
+	opacity: 1;
+}
+
+.cell-num {
+	border-right:none;
+	height: 40px;
+}
+
+td.cell-name:hover {
+  background-color: transparent;
+  border: none;
+  cursor: auto;
+}
+
+div#messageArea {
+	position: absolute;
+	width: auto;
+	height: auto;
+	left: 110px;
+	padding: 9px;
+	color: #131313;
+	font-weight: 700;
+}
+
+form {
+	position: absolute;
+ 	bottom: 0;
+	right: 15px;
+}
+
+input {
+	width: 75px;
+}
+
+#hitInput {
+	width: 95px;
+	padding: 15px 10px;
+	margin-right: 10px;
+	border: 1px solid #2c2b2b;
+	border-radius: 5px;
+	color:#000000;
+}
+
+#hitButton {
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	width: 222px;
+	padding: 15px 0;
+	background-color: #131313;
+	outline: none;
+	color:#ffffff;
+	font-family: 'MTSsans', Arial, sans-serif;
+}
+
+#hitButton:hover {
+	background-color: #2c2b2b;
+  	cursor: pointer;
+}
+
+.hit {
+	background: url("img/ship.png") no-repeat center center #000000;
+	opacity: 0.6;
+}
+
+.miss {
+	background: url("img/miss.png") no-repeat center center #000000;
+	opacity: 0.6;
+}
+
+.viewnone {
+	display: none;
+}
